@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z Courses</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+        
+</head>
+<body>
+    <!-- ------------------NavBar--------- -->
+    <header class="bg">   
+        <section class="container">
+            <nav class="navbar navbar-expand-lg navbar-light font-weight-bold">
+                <a class="navbar-brand" href='index.html'>
+                    <img src="images/icon/Logo.png" width="50px" height= "50px" left= "135px" top= "30px" alt="logo">
+                </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto px-2">
+                    <li class="nav-item active px-3">
+                        <a class="nav-link" href="#">Books</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="#courses">Zintsomi Courses</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <button  onclick="logout()" type="button" class="btn btn-danger">Sign Out</button>
+                    </li>       
+                </ul>
+            </div>
+            </nav>
+        </section>
+   
+    </header>
+<main>
+   
+    <!-- ----------------------------------Courses----------------------- -->
+    <section class="container online-courses mt-5 pt-5" id="courses">
+        <h2>Zintsomi Courses</h2>
+
+        <button id="myBtn" type="button" class="btn btn-outline-danger">Create Course +</button> 
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+             
+            <div class="card">
+                <div class="card-body">
+                    <form id="post-form">
+                        <center><h3>Make A Blog</h3></center>
+                        <textarea id="post" class="form-control" placeholder="Enter name of course"></textarea>
+                        <br>
+                        <textarea id="price" class="form-control" placeholder="Enter Price in Rands"></textarea>
+                        <br>
+                        <input type="file" class="form-control" id="image" accept="application/pdf">
+                        <br>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-outline-danger" onclick="upload()">Next</button>
+                        </div>
+   
+                    </form>
+                 </div>
+   
+            </div>
+
+
+
+           </div>
+             </div>
+
+
+            <div id="toast"></div>
+            <!--Post div-->
+            <div  class="row mt-4" id="posts" ></div>
+
+        
+    </section>
+
+
+
+   
+  
+</main>
+
+          <!-- The core Firebase JS SDK is always required and must be listed first...make sure you remove -app from below line -->
+          <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+
+          <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyAlbVSU_pTs6DVQI-QMnQO_aFUqPvgo4lY",
+              authDomain: "web-app-3eb5e.firebaseapp.com",
+              databaseURL: "https://web-app-3eb5e.firebaseio.com",
+              projectId: "web-app-3eb5e",
+              storageBucket: "web-app-3eb5e.appspot.com",
+              messagingSenderId: "643203578636",
+              appId: "1:643203578636:web:c0025425207221f554e729",
+              measurementId: "G-8JLGQB4GBY"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+          </script>
+
+
+
+    <script src="javascript.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+
+    <!-- -----------Bootstrap-JS---------- -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
