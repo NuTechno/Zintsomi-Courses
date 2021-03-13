@@ -80,7 +80,7 @@ function getdata(){
 
             posts_div.innerHTML="<div class='col-sm-4 mt-2 mb-1'>"+
             "<div style= 'padding-top: 20px; margin:5px 5px;' class='card '>"+
-            "<embed mx-auto d-block mt-5 src='"+value.imageURL+"' style='height:250;'>"+
+            "<embed mx-auto d-block mt-5 src='"+value.imageURL+"' loading='lazy' style='height:250;'>"+
             "<div class='card-body'><p class='card-text'>"+value.text+"</p>"+
             "<p class='card-text'>"+"R"+value.cost+"</p>"+
             "<a href='"+value.imageURL+"'target='_blank' style='float: left;' class='btn btn-outline-danger'  '>Buy</a>"+
