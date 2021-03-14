@@ -82,7 +82,7 @@ function getdata(){
             "<div style= 'padding-top: 20px; margin:5px 5px;' class='card '>"+
             "<embed mx-auto d-block mt-5 src='"+value.imageURL+"' loading='lazy' style='height:250;'>"+
             "<div class='card-body'><p class='card-text'>"+value.text+"</p>"+
-            "<p class='card-text'>"+"R"+value.cost+"</p>"+
+            "<p class='card-text'>"+value.cost+"</p>"+
             "<a href='"+value.imageURL+"'target='_blank' style='float: left;' class='btn btn-outline-danger'  '>Buy</a>"+
             "<button class='btn btn-danger' id='"+key+"' style='float: right;' onclick='delete_post(this.id)'>Delete</button>"+
             "</div></div></div>"+posts_div.innerHTML;
