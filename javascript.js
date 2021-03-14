@@ -83,7 +83,11 @@ function getdata(){
             "<embed mx-auto d-block mt-5 src='"+value.imageURL+"' loading='lazy' style='height:250;'>"+
             "<div class='card-body'><p class='card-text'>"+value.text+"</p>"+
             "<p class='card-text'>"+value.cost+"</p>"+
-            "<a href='"+value.imageURL+"'target='_blank' style='float: left;' class='btn btn-outline-danger'  '>Buy</a>"+
+            // "<a href='"+value.imageURL+"'target='_blank' style='float: left;' class='btn btn-outline-danger'  '>Buy</a>"+
+
+                "<a class='btn btn-outline-danger' href='https://www.payfast.co.za/eng/process?cmd=_paynow&amp;receiver=17395995&amp;item_name=Zintsomi+Courses&amp;amount="+value.cost+"'>Buy</a>"+
+
+
             "<button class='btn btn-danger' id='"+key+"' style='float: right;' onclick='delete_post(this.id)'>Delete</button>"+
             "</div></div></div>"+posts_div.innerHTML;
         }
@@ -93,6 +97,8 @@ function getdata(){
             "<embed mx-auto d-block mt-5 src='"+value.imageURL+"' style='height:250;'>"+
             "<div class='card-body'><p class='card-text'>"+value.text+"</p>"+
             "<p class='card-text'>"+value.cost+"</p>"+
+            "<a class='btn btn-outline-danger' href='https://www.payfast.co.za/eng/process?cmd=_paynow&amp;receiver=17395995&amp;item_name=Zintsomi+Courses&amp;amount="+value.cost+"'>Buy</a>"+
+
             //"<button class='btn btn-danger' id='"+key+"' onclick='delete_post(this.id)'>Delete</button>"+
             "<a href='"+value.imageURL+"'target='_blank' style='float: left;' class='btn btn-outline-danger'  '>Buy</a>"+
             "</div></div></div>"+posts_div.innerHTML;
