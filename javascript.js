@@ -147,3 +147,52 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+function upload(){
+
+ 
+
+  var cuser = firebase.auth().currentUser.uid;
+
+  //get image name
+  var imageName=image.name;
+  //firebase storage reference
+  //it is the path where your image will be stored
+  var storageRef=firebase.storage().ref('images/'+imageName);
+  //upload image to selected storage reference
+  //make sure you pass image here
+  var uploadTask=storageRef.put(image);
+  //to get the state of image uploading....
+  uploadTask.on('state_changed',function(snapshot){
+       //get task progress by following code
+       var progress=(snapshot.bytesTransferred/snapshot.totalBytes)*100;
+       console.log("upload is "+progress+" done");
+  },function(error){
+    //handle error here
+    console.log(error.message);
+  },function(){
+      //handle successfull upload here..
+      uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL){
+         //get your image download url here and upload it to databse
+         //our path where data is stored ...push is used so that every post have unique id
+         firebase.database().ref('accounts/').push().set({
+               text:post,
+               cost:amount,
+               imageURL:downloadURL,
+               author:cuser
+         },function(error){
+             if(error){
+                 alert("Error while uploading");
+             }else{
+                 //now reset your form
+                 document.getElementById('post-form').reset();
+                 getdata();
+
+
+             }
+         });
+      });
+  });
+
+}
