@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z Courses</title>
+    <title>Z Books</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
@@ -39,10 +39,10 @@
    
     <!-- ----------------------------------Courses----------------------- -->
     <section class="container online-courses mt-5 pt-5" id="courses">
-        <h2>Zintsomi Courses</h2>
+        <h2>Zintsomi Books</h2>
 
         
-        <button id="myBtn" type="button" class="btn btn-outline-danger">Create Course +</button> 
+        <!-- <button id="myBtn" type="button" class="btn btn-outline-danger">Create Course +</button>  -->
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
@@ -58,8 +58,8 @@
                         <textarea  id="post" class="form-control" placeholder="Enter name of course"></textarea>
                         <br>
                         <div class="row">
-                        <p style="font-size: 35px; margin-left: 15px;">R</p>
-                        <textarea style="height: 50px; width: 250px;" id="price" class="form-control" placeholder="Enter Price (Numbers only)"></textarea>
+                        <!-- <p style="font-size: 35px; margin-left: 15px;">R</p> -->
+                        <textarea style="height: 50px; width: 250px;" id="price" class="form-control" placeholder="Author"></textarea>
                         </div>
                         <br>
                         Upload PDF File
@@ -101,25 +101,26 @@
   
 </main>
 
-          <!-- The core Firebase JS SDK is always required and must be listed first...make sure you remove -app from below line -->
-          <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
 
-          <script>
-            // Your web app's Firebase configuration
-            var firebaseConfig = {
-                apiKey: "AIzaSyAlbVSU_pTs6DVQI-QMnQO_aFUqPvgo4lY",
-                authDomain: "web-app-3eb5e.firebaseapp.com",
-                databaseURL: "https://web-app-3eb5e.firebaseio.com",
-                projectId: "web-app-3eb5e",
-                storageBucket: "web-app-3eb5e.appspot.com",
-                messagingSenderId: "643203578636",
-                appId: "1:643203578636:web:c0025425207221f554e729",
-                measurementId: "G-8JLGQB4GBY"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            firebase.analytics();
-          </script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA-bHJAHOU5v8w2NKFnJe3HAvkmet86Jag",
+    authDomain: "books-b9d4e.firebaseapp.com",
+    databaseURL: "https://books-b9d4e-default-rtdb.firebaseio.com",
+    projectId: "books-b9d4e",
+    storageBucket: "books-b9d4e.appspot.com",
+    messagingSenderId: "966329155512",
+    appId: "1:966329155512:web:4c6671936e30934564994d",
+    measurementId: "G-1ZYP27GPWW"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
 
 
 
