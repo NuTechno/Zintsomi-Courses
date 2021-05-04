@@ -45,7 +45,7 @@
         <h2>Zintsomi Books</h2>
 
         
-        <button id="myBtn" type="button" class="btn btn-outline-danger">Create Course +</button> 
+        <button id="myBtn" type="button" class="btn btn-outline-danger">Upload Your Story +</button> 
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
@@ -104,30 +104,25 @@
   
 </main>
 
+<!-- The core Firebase JS SDK is always required and must be listed first...make sure you remove -app from below line -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
-
-     <script>
-       // Your web app's Firebase configuration
-       // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-       var firebaseConfig = {
-         apiKey: "AIzaSyAlbVSU_pTs6DVQI-QMnQO_aFUqPvgo4lY",
-         authDomain: "web-app-3eb5e.firebaseapp.com",
-         databaseURL: "https://web-app-3eb5e.firebaseio.com",
-         projectId: "web-app-3eb5e",
-         storageBucket: "web-app-3eb5e.appspot.com",
-         messagingSenderId: "643203578636",
-         appId: "1:643203578636:web:c0025425207221f554e729",
-         measurementId: "G-8JLGQB4GBY"
-       };
-       // Initialize Firebase
-       firebase.initializeApp(firebaseConfig);
-       firebase.analytics();
-     </script>
-
-
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAlbVSU_pTs6DVQI-QMnQO_aFUqPvgo4lY",
+    authDomain: "web-app-3eb5e.firebaseapp.com",
+    databaseURL: "https://web-app-3eb5e.firebaseio.com",
+    projectId: "web-app-3eb5e",
+    storageBucket: "web-app-3eb5e.appspot.com",
+    messagingSenderId: "643203578636",
+    appId: "1:643203578636:web:c0025425207221f554e729",
+    measurementId: "G-8JLGQB4GBY"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 
     <script src="javascript.js"></script>
     <script type="text/javascript" src="index.js"></script>
